@@ -1,0 +1,23 @@
+/* 
+* Common Footer
+*/
+
+.footer__company__name {
+    font-size: 44px;
+}
+
+.footer__tagline {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 124.5%;
+}
+
+.footer__list{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer__copyright{
+    text-align: center;
+    color: $orange ;
+}

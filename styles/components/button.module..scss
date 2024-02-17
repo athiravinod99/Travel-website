@@ -1,0 +1,30 @@
+/* 
+* Styles related to buttons
+*/
+
+.btn {
+    font-family: $open-sans;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: $space-xxs;
+    border: none;
+}
+
+.btn-signup {
+    @extend .btn;
+    background-color: $signup-btn;
+    width: 170px;
+    height: 60px;
+    color: $white;
+}
+
+.btn-header {
+    @extend .btn;
+    background-color: $yellow;
+}
+
+.btn-subscribe {
+    @extend .btn;
+    background-color: $gradient;
+}

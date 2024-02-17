@@ -1,0 +1,21 @@
+/* 
+* Main file which is only intended to import other files.
+*/
+
+//ABSTRACT
+@import './abstracts/fonts.module.scss';
+@import './abstracts/mixins.module.scss';
+@import './abstracts/variables.module.scss';
+
+//BASE
+
+//COMPONENTS
+@import './components/button.module..scss';
+@import './components/carousel-nimation.module.scss';
+@import './components/navbar.module.scss';
+@import './components/blogs.module.scss';
+
+//LAYOUT
+@import './layouts/footer.module.scss'
+
+

@@ -1,0 +1,25 @@
+/* 
+* Styles related to Navigation bar in header
+*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 40%;
+    float: right;
+}
+
+.navbar_item {
+    color: black;
+    margin: 0 20px;
+}
+
+.signup_btn {
+    border: 3px solid black;
+    background-color: transparent;
+    margin: 0 20px;
+    height: 40px;
+    width: 80px;
+}

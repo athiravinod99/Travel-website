@@ -5,6 +5,14 @@ $animation-steps-fraction: 100 / $carousel-items;
 $slide-change-timing: 3; // percentage of total animation cycle
 
 
+.container {
+  width: calc(100% + -180px);
+  margin: auto;
+}
+
+.blog__heading {
+  text-align: left;
+}
 
 .wrapper {
   background: linear-gradient(60deg, #420285, #08BDBD);

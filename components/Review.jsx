@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "../styles/components/blogs.module.scss"
 
 
-const Blog = () => {
+const Review = () => {
     const emojis = [
         ["👨", "Unlocking the Power of Mindfulness", "we delve into the transformative practice of mindfulness"],
         ["👨", "Exploring the Wonders of Sustainable Travel", "we delve into the transformative practice of mindfulness"],
@@ -12,7 +12,7 @@ const Blog = () => {
 
   return (
     <div style={{padding: "30px 0px", width:"60%",display: "flex", margin:"auto"}}>
-    <h2 style={{ textAlign: "left"}}>EXPLORE RECENT BLOGS FROM TOP TRAVELLERS</h2>
+    <h2 style={{ textAlign: "left"}}>HAPPY CUSTOMERS</h2>
     <div className={styles.wrapper}>
       <div className={styles.carousel}>
         {emojis.map((emoji, index) => (
@@ -30,4 +30,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Review

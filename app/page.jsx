@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
-    <Hero />
+    {/* <Hero /> */}
     <Updates />
     <Blogs />
     <Destinations />

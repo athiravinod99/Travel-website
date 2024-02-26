@@ -2,10 +2,14 @@
 import React from 'react';
 import { Card, CardContent, Typography,CardMedia, CardActions,Button} from '@mui/material';
 import blogImg2 from '../public/Images/blogImg2.jpg'; 
+import MoreButton from './MoreButton';
+
+import styles from "../styles/components/cards.module.scss"
 
 const TravelCard = ({ title, content }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className={styles.main__card}>
+    <Card sx={{ maxWidth: 345 }} className={styles.card}>
       <CardMedia 
       component="img"
         height="140"
@@ -21,8 +25,9 @@ const TravelCard = ({ title, content }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Read More</Button>
+        <MoreButton buttonText="Read More" />
       </CardActions>
+    </Card>
     </Card>
   );
 };

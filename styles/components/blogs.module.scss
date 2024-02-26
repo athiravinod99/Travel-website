@@ -1,3 +1,6 @@
+@import "../abstracts/variables.module.scss";
+@import "../abstracts/fonts.module.scss";
+
 $animation-timing: 27s;
 $carousel-items: 9;
 $animation-delay-fraction: $animation-timing / $carousel-items;
@@ -6,12 +9,17 @@ $slide-change-timing: 3; // percentage of total animation cycle
 
 
 .container {
-  width: calc(100% + -180px);
-  margin: auto;
+  width: calc(100% - 80px);
+  margin: 0 auto #{$space-l};
+  height: auto !important;
 }
 
 .blog__heading {
-  text-align: left;
+  text-align: center;
+  font-family: $volkhov;
+  color: $heading;
+  padding: $space-s;
+  font-weight: $fz-xm;
 }
 
 .wrapper {

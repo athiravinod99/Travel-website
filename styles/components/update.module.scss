@@ -1,0 +1,21 @@
+@import "../abstracts/variables.module.scss";
+@import "../abstracts/fonts.module.scss";
+
+
+.container {
+  width: calc(100% - 80px);
+  margin: 0 auto #{$space-l};
+  height: auto;
+}
+
+.main_container {
+  height: auto;
+}
+.heading {
+  text-align: center;
+  font-family: $volkhov;
+  color: $heading;
+  padding: $space-s;
+  font-weight: $fz-xm;
+  text-transform: uppercase;
+}

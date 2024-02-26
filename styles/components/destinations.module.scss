@@ -1,38 +1,295 @@
-// components/PopularDestinations.module.scss
-.imgContainer {
-    position: absolute;
-    height: 400px;
-    width: 70%;
-    margin: auto;
-    top:20%;
+@import "../abstracts/fonts.module.scss";
+@import "../abstracts/variables.module.scss";
+// .imgContainer {
+//     // position: absolute;
+//     height: 400px;
+//     width: 70%;
+//     margin: auto;
+//     top:20%;
     
 
-    /* Adjust height as needed */
-}
+//     /* Adjust height as needed */
+// }
 
-.imageContainer {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    position: relative;
-}
+// .imageContainer {
+//     width: 100%;
+//     height: 100%;
+//     z-index: 2;
+//     position: relative;
+// }
 
-.MuiPaper-root {
-    margin-top: 20px;
-}
 
-.destination{
-    background-color: #9AD0C2;
-    margin-bottom: 300px;
-    height: 400px;
-    position: relative;
-    display: flex;
-    justify-content: center;
+// .MuiPaper-root {
+//     margin-top: 20px;
+// }
+
+// .destination{
+//     // background-color: #9AD0C2;
+//     margin-bottom: 300px;
+//     height: 400px;
+//     // position: relative;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
     
+// }
+// .destination__name{
+//     // position: absolute;
+//     top: 50%;
+//     left: 45%;
+//     color: white;
+//     font-family: $volkhov;
+//     font-weight: $fz-xm;
+// }
+
+.heading {
+    text-align: center;
+    font-family: $volkhov;
+    color: $heading;
+    font-weight: $fz-xm;
+  }
+
+//   .content {
+//     text-align: center;
+//     font-family: $volkhov;
+//     color: $heading;
+//     max-width: 700px;
+//     font-weight: $fz-xm;
+//   }
+
+//   .cardContainer {
+//     width: fit-content;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+  
+//   .card__weather {
+//     position: relative;
+//     width: 220px;
+//     height: 250px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 20px 10px;
+//     border-radius: 10px;
+//     // backdrop-filter: blur(30px);
+//     // background-color: rgba(65, 65, 65, 0.308);
+//     border: none;
+//     cursor: pointer;
+//   }
+  
+//   .city {
+//     font-weight: 700;
+//     font-size: 0.9em;
+//     letter-spacing: 1.2px;
+//     color: white;
+//   }
+  
+//   .weather {
+//     font-weight: 500;
+//     font-size: 0.7em;
+//     letter-spacing: 1.2px;
+//     color: rgb(197, 197, 197);
+//   }
+  
+//   .temp {
+//     font-size: 1.8em;
+//     color: white;
+//   }
+  
+//   .minmaxContainer {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+  
+//   .min,
+//   .max {
+//     width: 50%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     justify-content: center;
+//     padding: 0px 20px;
+//     gap: 4px;
+//   }
+  
+//   .max {
+//     align-items: flex-start;
+//     border-left: 2px solid white;
+//   }
+  
+//   .maxHeading,
+//   .minHeading {
+//     font-size: 0.7em;
+//     font-weight: 600;
+//     color: white;
+//   }
+  
+//   .maxTemp,
+//   .minTemp {
+//     font-size: 0.6em;
+//     font-weight: 500;
+//     color: rgb(197, 197, 197);
+//   }
+  
+//   .cardContainer::before {
+//     width: 100px;
+//     height: 100px;
+//     content: "";
+//     position: absolute;
+//     background-color: rgb(144, 161, 255);
+//     z-index: -1;
+//     border-radius: 50%;
+//     left: 100px;
+//     top: 50px;
+//     transition: all 1s;
+//   }
+  
+//   .cardContainer:hover::before {
+//     transform: translate(-50px, 50px);
+//   }
+  
+//   .destination__details{
+//     color: red;
+//   }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
-.destination__name{
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    color: white;
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  // background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  // border-radius: 8px;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2); 
+}
+.polaroid > img{
+  max-width: 100%;
+  height: auto;
+}
+.caption {
+  font-size: 16px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.item__img {
+  width: 30%;
+  display: inline-block;
+  margin-top: 2rem;
+  filter: grayscale(100%);
+}
+.item__img .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.item__img:nth-of-type(4n+1) {
+  transform: scale(0.8, 0.8) rotate(5deg);
+  transition: all 0.35s;
+}
+.item__img:nth-of-type(4n+1) .polaroid:before {
+  transform: rotate(6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item__img:nth-of-type(4n+2) {
+  transform: scale(0.8, 0.8) rotate(-5deg);
+  transition: all 0.35s;
+}
+.item__img:nth-of-type(4n+2) .polaroid:before {
+  transform: rotate(-6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item__img:nth-of-type(4n+4) {
+  transform: scale(0.8, 0.8) rotate(3deg);
+  transition: all 0.35s;
+}
+.item__img:nth-of-type(4n+4) .polaroid:before {
+  transform: rotate(4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item__img:nth-of-type(4n+3) {
+  transform: scale(0.8, 0.8) rotate(-3deg);
+  transition: all 0.35s;
+}
+.item__img:nth-of-type(4n+3) .polaroid:before {
+  transform: rotate(-4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item__img:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.item__img:hover .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+  transition: all 0.35s;
+}
+
+.item__title {
+  position: absolute;
+  overflow: hidden;
+  font-size: 30px;
+  max-width: 450px;
+  font-weight: 30px;
+  text-transform: capitalize;
+  color: rgba(8, 80, 133);
+  
+
+}
+
+.car {
+  height: 60px;
+  width: 100px;
+  float: inline-end;
 }

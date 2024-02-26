@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import styles from "../styles/components/carousel-animation.module.scss";
-import { Grid } from '@mui/material';
+import { Grid, Card, CardContent, Box, Typography, CardMedia } from '@mui/material';
 
 const Carousel = ({ slides = [], itemsPerSlide  }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,8 +33,28 @@ const Carousel = ({ slides = [], itemsPerSlide  }) => {
       >
         {group.map((slide, idx) => (
           <div key={idx} className={styles.slideItem}>
+            {/* <Card className={styles.card}>
             <img src={slide.image.src} alt={slide.caption} className={styles.carouselImage} />
             <div className={styles.carouselCaption}>{slide.caption}</div>
+            </Card> */}
+            <Card sx={{ display: 'flex' , flexDirection: 'row-reverse' }} >
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography component="div" variant="h5">
+           {slide.title}
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="div">
+            {slide.caption}
+          </Typography>
+        </CardContent>
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 151 }}
+        image={slide.image.src}
+        alt="Live from space album cover"
+      />
+    </Card>
           </div>
         ))}
       </div>
@@ -60,15 +80,6 @@ const Carousel = ({ slides = [], itemsPerSlide  }) => {
       </div>
      
       <div className={styles.carouselDots}>
-        {/* {slides.map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.dot} ${
-              Math.floor(index / itemsPerSlide) === currentSlide ? styles.activeDot : ''
-            }`}
-            onClick={() => handleDotClick(Math.floor(index / itemsPerSlide))}
-          />
-        ))} */}
         {renderDots()}
       </div>
     </div>

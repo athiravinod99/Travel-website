@@ -1,0 +1,35 @@
+/* 
+* Styles related to buttons
+*/
+@import '../abstracts/variables.module.scss';
+@import '../abstracts/fonts.module.scss';
+
+.button {
+    font-family: $volkhov;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: $space-xxs;
+    border-radius: 10px;
+    font-size: $fz-xm;
+    border: none;
+    background-color: #91d4dd;
+}
+  
+ 
+.btn__login {
+    @extend .button;
+    background-color: #91d4dd;
+    width: 170px;
+    height: 60px;
+    color: $white;
+}
+
+.btn-header {
+    @extend .button;
+    background-color: $yellow;
+}
+
+.btn-subscribe {
+    @extend .button;
+    background-color: $gradient;
+}

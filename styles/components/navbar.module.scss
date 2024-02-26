@@ -2,18 +2,28 @@
 * Styles related to Navigation bar in header
 */
 
-.navbar {
+@import "../abstracts/variables.module.scss";
+@import "../abstracts/fonts.module.scss";
+
+.navbar__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+  }
+
+.navbar__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
     width: 40%;
     float: right;
-}
-
-.navbar_item {
-    color: black;
-    margin: 0 20px;
+    margin: $space-s 0;
+    padding: $space-xxs;
+    background-color: $text-color;
+    border-radius: 8px;
 }
 
 .signup_btn {
@@ -23,3 +33,27 @@
     height: 40px;
     width: 80px;
 }
+
+
+  
+  
+  .section {
+    position: relative;
+  }
+  
+  .sectionContent {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .sectionImage img {
+    width: 100%;
+  }
+  
+  .title {
+    font-family: $volkhov;
+  }

@@ -1,0 +1,9 @@
+@import "../../styles/abstracts/variables.module.scss";
+
+.container {
+    width: calc(100% - 80px);
+    margin: 0 auto #{$space-l};
+    height: auto !important;
+    position: absolute;
+    bottom: 20%
+  }

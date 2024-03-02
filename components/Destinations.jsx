@@ -11,6 +11,7 @@ import { Grid } from '@mui/material';
 import map from "../public/Images/map.png";
 import carImg from "../public/Images/carImg.png";
 import MoreButton from "./MoreButton";
+import TravelButton from "./TravelButton";
 
 const Destinations = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -159,6 +160,7 @@ const Destinations = () => {
         <Grid item xs={6}>
           <div className={styles.item__title}> Plan and book your perfect trip with expert advice, travel tips,
          destination information and inspiration from us.
+         <TravelButton buttonText="Where you want to go"/>
          </div>
         </Grid>
       </Grid>

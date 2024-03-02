@@ -2,8 +2,7 @@ import { navLinks } from "@/constants";
 import logo from "../public/Images/logo.jpg";
 import styles from "../styles/components/navbar.module.scss";
 import TravelButton from "./TravelButton";
-import dashboardImg2 from "../public/Images/dashboardImg1.jpg";
-import { Typography } from '@mui/material';
+
 
 const Navbar = () => {
   return (
@@ -22,15 +21,16 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
-      <section className={styles.section}>
+      {/* <section className={styles.section}>
         <div className={styles.sectionContent}>
-          <Typography variant="h2" className={styles.title}>EXPLORE</Typography>
+          <Typography variant="title"  className={styles.title}><span class='one'>E</span><span class='two'>X</span><span class='three'>P</span><span class='four'>L</span><span class='five'>O</span>
+          <span class='six'>R</span><span class='seven'>E</span></Typography>
           <TravelButton variant="contained" buttonText="Plan your Trip" />
         </div>
         <div className={styles.sectionImage}>
-          <img src={dashboardImg2.src} alt="camp" />
+          <img src={destinationImg0.src} alt="camp" />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

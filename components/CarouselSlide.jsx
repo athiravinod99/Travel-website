@@ -26,31 +26,29 @@ const Carousel = ({ slides = [], itemsPerSlide  }) => {
     }
     return slideGroups.map((group, index) => (
       <div
-        key={index}
-        className={`${styles.carouselSlide} ${
-          index === currentSlide ? styles.active : ''
-        }`}
-      >
+            key={index}
+            className={`${styles.carouselSlide} ${
+              index === currentSlide ? styles.active : ''
+            }`}
+            style={{ transform: `translateX(-${currentSlide * (100 / itemsPerSlide)}%)` }}
+          >
+
         {group.map((slide, idx) => (
           <div key={idx} className={styles.slideItem}>
-            {/* <Card className={styles.card}>
-            <img src={slide.image.src} alt={slide.caption} className={styles.carouselImage} />
-            <div className={styles.carouselCaption}>{slide.caption}</div>
-            </Card> */}
-            <Card sx={{ display: 'flex' , flexDirection: 'row-reverse' }} >
+            <Card className={styles.card}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
+          <Typography component="div" variant="h6" className={slide.caption}>
            {slide.title}
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" component="div">
+          <Typography variant="body1" component="div" className={slide.content}>
             {slide.caption}
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 151 }}
+        sx={{ width: 151, height: "25vh !important", padding: 2 }}
         image={slide.image.src}
         alt="Live from space album cover"
       />

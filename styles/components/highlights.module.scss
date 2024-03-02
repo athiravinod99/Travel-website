@@ -1,0 +1,38 @@
+@import "../abstracts/variables.module.scss";
+@import "../abstracts/fonts.module.scss";
+
+.highlights {
+  flex-grow: 1;
+}
+
+.paragraphColumn {
+  padding-right: 16px; // You can adjust this value as needed
+}
+
+.collageColumn {
+  padding-left: 16px; // You can adjust this value as needed
+}
+
+.collageItem {
+  flex: 1;
+  margin: 0.5rem;
+}
+
+.heading {
+  font-family: $volkhov;
+  color: $heading;
+  text-align: center;
+  margin: $space-xs 0 ;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  font-family: $volkhov;
+  color: $heading;
+}
+
+.highlight{
+  font-size: inherit;
+  font-weight: $fw-xm;
+}

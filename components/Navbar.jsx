@@ -1,13 +1,18 @@
+/* 
+* navigation bar component
+*/
+
 import { navLinks } from "@/constants";
 import logo from "../public/Images/logo.jpg";
 import styles from "../styles/components/navbar.module.scss";
 import TravelButton from "./TravelButton";
+import { clsx } from 'clsx';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <>
-      <div className={styles.navbar__wrapper}>
+      <div className={clsx(styles.navbarWrapper, props?.className?.navbarWrapper)}>
         <nav>
           <ul className={styles.navbar__items}>
             {navLinks.map((item) => (

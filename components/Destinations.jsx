@@ -1,3 +1,7 @@
+/* 
+* Destination section in dashboard
+*/
+
 "use client";
 import React, { useState } from "react";
 import { Tabs, Tab, Paper, Box, Typography } from "@mui/material";

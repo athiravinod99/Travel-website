@@ -1,3 +1,7 @@
+/* 
+* Hero section in dashboard
+*/
+
 import styles from "../styles/components/hero.module.scss";
 import destinationImg0 from "../public/Images/destinationImg0.jpg";
 import { Typography } from '@mui/material';

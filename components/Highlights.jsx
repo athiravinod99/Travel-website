@@ -1,3 +1,7 @@
+/* 
+* Highlights section in dashboard
+*/
+
 import React from "react";
 import { Grid, Typography, ImageListItem, ImageList } from "@mui/material";
 import styles from "../styles/components/highlights.module.scss";

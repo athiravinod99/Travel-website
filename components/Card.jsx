@@ -1,4 +1,7 @@
-// components/Card.js
+/* 
+* Card component
+*/
+
 import React from 'react';
 import { Card, CardContent, Typography,CardMedia, CardActions,Button} from '@mui/material';
 import blogImg2 from '../public/Images/blogImg2.jpg'; 

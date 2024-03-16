@@ -1,3 +1,7 @@
+/* 
+* Common button component
+*/
+
 import React from 'react';
 import styles from "../styles/components/button.module.scss";
 import Button from '@mui/material/Button';

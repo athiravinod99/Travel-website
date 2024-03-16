@@ -1,3 +1,7 @@
+/* 
+* Carousel animation component
+*/
+
 "use client"
 import React, { useState, useEffect } from "react";
 import styles from "../styles/components/carousel-animation.module.scss";

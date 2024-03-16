@@ -1,3 +1,7 @@
+/* 
+* Blogs section in dashboard
+*/
+
 "use client"
 import React from 'react';
 import { Grid, Typography, Container } from "@mui/material";

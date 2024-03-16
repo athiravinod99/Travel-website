@@ -1,3 +1,7 @@
+/* 
+* Recent updates section in dashboard
+*/
+
 import React from 'react'
 import destinationImg1 from "../public/Images/destinationImg1.jpg"
 import updatesImg1 from "../public/Images/updatesImg1.jpg"

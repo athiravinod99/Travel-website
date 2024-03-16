@@ -1,3 +1,7 @@
+/* 
+* Button component to show more content
+*/
+
 import React from 'react'
 import styles from "../styles/components/more-button.module.scss";
 
